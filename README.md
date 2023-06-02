@@ -141,7 +141,8 @@ M@DESKTOP-5LJ56TM MINGW64 ~/desktop/newfolder
 $ less folder_1/file_1.txt
 ```
 Команда less открывает файл в новом окне, возможен поиск по тексту через функцию /текст - подсвечивает все совпадения.
- **20.Вывести дату и время**
+ 
+**20.Вывести дату и время**
  ```
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/newfolder
 $ date
