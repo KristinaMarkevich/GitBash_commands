@@ -3,7 +3,7 @@
 
 main branch - the first homework
 
-HM2 branch - the second
+HM2 branch - the second homework
 <hr>
 
 
