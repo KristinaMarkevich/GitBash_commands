@@ -187,7 +187,7 @@ tf_2.txt:the second 2
 **25. Найти строки в файлах где есть только комбинация букв “sec” в текущей папке**
  ```
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
-$ grep -i -w "sec" *
+$ grep -w "sec" *
 grep: inner_dir_1: Is a directory
 grep: inner_dir_2: Is a directory
 ```
