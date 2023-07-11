@@ -1,3 +1,7 @@
+# GitBash_commands
+Learning how to use GitBash
+<hr>
+
 
 **1.Сделать папку dir_1**
 ```
@@ -25,10 +29,7 @@ $ pwd
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
 $ touch tf_1.txt
 ```
-**6.Находясь в папке dir_1 через команду cat создать текстовый файл tf_2.txt со следующими строками:
-- the first 1
-- the second 2
-- the third 3**
+**6.Находясь в папке dir_1 через команду cat создать текстовый файл tf_2.txt со следующими строками:the first 1, the second 2, the third 3**
 ```
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
 $ cat > tf_2.txt
@@ -37,6 +38,7 @@ the second 2
 the third 3
 ```
 ctrl + D
+
 **7.Зайти в папку inner_dir_1**
 ```
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
@@ -53,11 +55,15 @@ Yeah, I'm dancing with your soul in my sights
 It's a showdown
 In the spotlight
 ```
-** 9.Через cat добавить в текстовый файл tf_3.txt строку “the second 2”
- 10.Через cat добавить в текстовый файл tf_3.txt строку “the sec 2”
- 11.Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
- 12.Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
- 13.Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”**
+**9.Через cat добавить в текстовый файл tf_3.txt строку “the second 2”**
+
+**10.Через cat добавить в текстовый файл tf_3.txt строку “the sec 2”**
+
+**11.Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”**
+
+**12.Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”**
+
+**13.Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”**
 ```
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1/inner_dir_1
 $ cat >> tf_3.txt
@@ -181,7 +187,7 @@ tf_2.txt:the second 2
 **25. Найти строки в файлах где есть только комбинация букв “sec” в текущей папке**
  ```
 M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
-$ grep -i -w "sec" *
+$ grep -w "sec" *
 grep: inner_dir_1: Is a directory
 grep: inner_dir_2: Is a directory
 ```
@@ -284,20 +290,24 @@ welcome to the heaven!
 ```
 **36. Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”**
  ```
-
+M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
+$ grep -lsir 'sec' | xargs mv -t inner_dir_1/
 ```
 **37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”**
  ```
-
+M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
+$ grep -lisr 'sec' | xargs cp -t inner_dir_2/
 ```
 **38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, 
 скопировать и вставить эти строки в один новый созданный текстовый файл.**
  ```
-
+M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
+$ grep -hri 'sec' | xargs echo >> tf_7.txt
 ```
 **39. Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec”**
  ```
-
+M@DESKTOP-5LJ56TM MINGW64 ~/desktop/dir_1
+$ grep -rlw 'sec' | xargs rm
 ```
 **40. Просто вывести в терминал строку “Good job!!”**
  ```
